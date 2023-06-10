@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/Animations.css">
+    <link rel="stylesheet" href="CSS/StartButton.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="Roulette.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" ></script> <!-- GSAPのインストール-->
+
+    <style>
+    </style>
+  </head>
+    <title>ROULETTE ONLINE</title>
+    <header>
+    <h1 class="Headertitle">VALORANT ROULETTE ONLINE</h1>
+    </header>
+  <body>
+    <div class="split-container">
+      <div class="split-middle">
+        <!-- Roulette start -->
+            <button class="StartButton" id="StartButton"onclick="changeImageSource()" class="StartButton">
+              <span class="StartButton_lg">
+                  <span class="StartButton_sl"></span>
+                  <span class="StartButton_text">Roulette START</span>
+              </span>
+          </button>
+      </div>
+      <div class="split-row">
+        <img id="Resultimage" src="images/Defaultimages/DefaultIMG.png" width="960" height="auto" onselectstart="return false;" onmousedown="return false;">
+        <br>
+
+      </div>
+      <div class="split-button">
+
+        <button id="ASCENT_Buttonid" onclick="ASCENT_ButtonPush()"ASCENT><img id="ASCENT_Buttonid" src="images/Buttonimages/ASCENT.png" alt="ASCENT" onselectstart="return false;" onmousedown="return false;"></button>
+        <button id="BIND_Buttonid" onclick="BIND_ButtonPush()"><img id="BIND_Buttonid" src="images/Buttonimages/BIND.png" alt="BIND" onselectstart="return false;" onmousedown="return false;"></button>
+        <button id="BREEZE_Buttonid" onclick="BREEZE_ButtonPush()"><img id="BREEZE_Buttonid" src="images/Buttonimages/BREEZE.png" alt="BREEZE" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="FRACTURE_Buttonid" onclick="FRACTURE_ButtonPush()"><img id="FRACTURE_Buttonid" src="images/Buttonimages/FRACTURE.png" alt="FRACTURE" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="HAVEN_Buttonid" onclick="HAVEN_ButtonPush()"><img id="HAVEN_Buttonid" src="images/Buttonimages/HAVEN.png" alt="HAVEN" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="ICEBOX_Buttonid" onclick="ICEBOX_ButtonPush()"><img id="ICEBOX_Buttonid" src="images/Buttonimages/ICEBOX.png" alt="ICEBOX" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="LOTUS_Buttonid" onclick="LOTUS_ButtonPush()"><img id="LOTUS_Buttonid" src="images/Buttonimages/LOTUS.png" alt="LOTUS" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="PEARL_Buttonid" onclick="PEARL_ButtonPush()"><img id="PEARL_Buttonid" src="images/Buttonimages/PEARL.png" alt="PEARL" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="SPLIT_Buttonid" onclick="SPLIT_ButtonPush()"><img id="SPLIT_Buttonid" src="images/Buttonimages/SPLIT.png" alt="SPLIT" onselectstart="return false;" onmousedown="return false;"></button></button>
+        
+      </div>
+    </div>
+  </body>
+</html>

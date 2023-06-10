@@ -1,0 +1,194 @@
+body {
+  /*　背景の色を設定 */
+  background-color:#0F1922;
+  background-image: url('../images/Backgroundimage/Wallpaper.jpg');  /*背景の画像のurl*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* 画像を中央寄せする */
+}
+
+/*カスタムフォントを指定*/
+@font-face {
+  font-family: 'ValorantFont';
+  src: url('fonts/Valorant Font.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TitleFont';
+  src: url('fonts/FontsFree-Net-Tungsten-Bold.ttf') format('truetype');
+}
+
+
+
+
+.Headertitle  {
+  /*ヘッダーの設定*/
+  text-align: center;
+  font-family: TitleFont, sans-serif;
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+}
+
+
+.split-container {
+  /* 画面を上下に分割するためのFlexbox*/
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+  .split-middle {
+    /*スタートボタンの親要素*/
+    display: flex;
+    border: 1px solid #cccccc00;
+    justify-content: center;
+    margin: 10px; /*下のFlexboxとのマージン*/
+  }
+    .StartButton {
+      /*スタートボタンの設定*/
+      background-color:rgb(161, 161, 161);
+      justify-content: center;
+      align-items: center;
+    }
+
+
+  .split-row {
+    /*リザルト画面の親要素*/
+    border: 1px solid #cccccc00;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+    #Resultimage {
+      /*リザルト画面の表示*/
+      width: 100%;
+      height: auto;
+      max-width: 960px;
+
+      filter:drop-shadow(0px 0px 51px #ffffff21);
+      background-color: transparent; /* 背景色を透明に設定 */
+
+    }
+
+
+  .split-button {
+    /*マップ排除のボタンの親要素*/
+    border: 1px solid #ffffff2a;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+    /*マップ排除のボタンの設定*/
+    #ASCENT_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+      
+    }
+
+    #BIND_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #BREEZE_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #FRACTURE_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #HAVEN_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #ICEBOX_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #LOTUS_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #PEARL_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #SPLIT_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+
+
+
+
+
+
+
+

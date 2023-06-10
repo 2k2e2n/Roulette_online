@@ -1,0 +1,22 @@
+/* zoomIn */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.4, .3, 0.9)
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+/* zoomIn */
+@keyframes zoomOut {
+    0% {
+
+        opacity: 1
+    }
+    50% {
+        opacity: 0;
+        transform: scale3d(0.4, .3, 0.9)
+    }
+}
