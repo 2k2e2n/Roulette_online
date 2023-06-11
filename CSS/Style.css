@@ -27,6 +27,12 @@ body {
   font-family: TitleFont, sans-serif;
   font-size: 80px;
   color: rgb(255, 255, 255);
+  
+    @media screen and (max-width: 1080px) {
+    .StartButton {
+      font-size: 10vw; /* 画面の幅の3%の文字サイズ */
+    }
+  }
 }
 
 
