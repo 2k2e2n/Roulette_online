@@ -1,6 +1,6 @@
-# Roulette_online
-これはVALORANTのマップをランダムで選択するツールです！
-詳しくは下記の文章をお読みください。
+# 「VALORANT_Roulette_online」
+# これはVALORANTのマップをランダムで選択するツールです！
+# 詳しくは下記の文章をお読みください。
 
 
 
