@@ -14,7 +14,12 @@
     font-size: 14px;
     transition: all .15s ease;
   }
-  
+    @media screen and (max-width: 1080px) {
+    .StartButton {
+      font-size: 5vw;
+    }
+  }
+
   .StartButton::before,
   .StartButton::after {
     content: '';
