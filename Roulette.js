@@ -6,6 +6,10 @@ function onPageLoad() {
 
 }
 
+//GitHubボタンを押したら新しいページに飛ぶ
+function GitHub_ButtonPush(){
+  window.open("https://github.com/2k2e2n/Roulette_online");
+}
 
 
 //ボタン連打を防ぐプログラム
@@ -62,6 +66,9 @@ function onPageLoad() {
       if (selectedMap == "SPLIT") {
         Resultimg.src = 'images/Resultimages/SPLIT.jpg';
       }
+      if (selectedMap == "SUNSET") {
+        Resultimg.src = 'images/Resultimages/SUNSET.jpg';
+      }
 
       const Resultimg_Anim = document.getElementById('Resultimage');
       gsap.from(Resultimg_Anim, { opacity: 0, duration: 1, delay: 0.1 });
@@ -85,7 +92,7 @@ function onPageLoad() {
   let PEARL_togglebutton = true;
   let SPLIT_togglebutton = true;
 
-  var options = ['ASCENT', 'BIND', 'BREEZE','FRACTURE', 'HAVEN', 'ICEBOX','LOTUS','PEARL', 'SPLIT'];
+  var options = ['ASCENT', 'BIND', 'BREEZE','FRACTURE', 'HAVEN', 'ICEBOX','LOTUS','PEARL', 'SPLIT', 'SUNSET'];
 
 
   // トグルボタンの処理（アセント
@@ -255,6 +262,25 @@ function SPLIT_ButtonPush() {
     // SPLITが見つからなかった場合、SPLITを追加する
     options.push(searchElement);
     console.log("added_SPLIT");  
+    image.style.filter = 'saturate(1)'; //ボタンの彩度を100にする
+  }
+  gsap.fromTo(image, { duration: 1, scale: 0.95 }, { duration: 0.3, scale: 1 });
+}
+
+function SUNSET_ButtonPush() {
+  var searchElement = "SUNSET"; //フラクチャーという文字を検索し、配列に追加したり消したりする
+  var index = options.indexOf(searchElement);
+  const image = document.getElementById('SUNSET_Buttonid'); //ボタンのidをコピペする
+  if (index !== -1) 
+  {
+    // SUNSETが見つかった場合、SUNSETを削除する
+    options.splice(index, 1);
+    console.log("deleted_SUNSET");
+    image.style.filter = 'saturate(0)';//ボタンの彩度を0にする
+  } else {
+    // SUNSETが見つからなかった場合、SUNSETを追加する
+    options.push(searchElement);
+    console.log("added_SUNSET");  
     image.style.filter = 'saturate(1)'; //ボタンの彩度を100にする
   }
   gsap.fromTo(image, { duration: 1, scale: 0.95 }, { duration: 0.3, scale: 1 });
