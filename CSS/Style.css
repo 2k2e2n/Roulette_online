@@ -29,13 +29,6 @@ body {
   color: rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 1080px) {
-  .Headertitle {
-    font-size: 6vw;
-  }
-}
-
-
 
 .split-container {
   /* 画面を上下に分割するためのFlexbox*/
@@ -89,6 +82,34 @@ body {
     height: auto;
     flex-wrap: wrap;
   }
+
+  /*右上固定のGithubジャンプボタン*/
+  .fixed_btn
+  {
+  top: 40px; 
+  right: 10px;
+  padding: 6px 40px;
+  }
+
+  /*GitHubボタン1*/
+  #GitHub_Buttonid {
+    width: 5%;
+    max-width: 50px;
+    min-width: 30px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+    border-color: transparent; /* 枠線を透明にする */
+    top: 30px;
+    position: fixed;
+    right: 30px;
+    
+  }
+
+
+
+
+
+
 
     /*マップ排除のボタンの設定*/
     #ASCENT_Buttonid {
@@ -181,6 +202,17 @@ body {
     }
 
     #SPLIT_Buttonid {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      min-width: 100px;
+
+      background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+      border-color: transparent; /* 枠線を透明にする */
+      animation: zoomIn 1.0s ease 0s 1 normal;
+    }
+
+    #SUNSET_Buttonid {
       width: 100%;
       height: auto;
       max-width: 200px;
