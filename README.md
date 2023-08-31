@@ -1,6 +1,7 @@
 # 「VALORANT_Roulette_online」
 # これはVALORANTのマップをランダムで選択するツールです！
 # 詳しくは下記の文章をお読みください。
+https://2k2e2n.github.io/Roulette_online/
 
 
 
