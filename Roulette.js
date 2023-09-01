@@ -8,15 +8,39 @@ function onPageLoad() {
 
 //GitHubボタンを押したら新しいページに飛ぶ
 function GitHub_ButtonPush(){
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   window.open("https://github.com/2k2e2n/Roulette_online");
 }
 
+//ボタンが押されたら音を鳴らす
+function PlayButtonEnterSound(){
+  if (SoundButton_toggle == true) {
+  document.getElementById('btn_Select_audio').currentTime = 0; //連続クリックに対応
+  document.getElementById('btn_Select_audio').play(); //クリックしたら音を再生
+  }
+}
+
+//ミュート機能
+var SoundButton_toggle = true;
+function SoundButton_push(){
+  console.log("ToggleSoundButton");
+  SoundButton_toggle = !SoundButton_toggle
+
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
+
+}
 
 //ボタン連打を防ぐプログラム
   function changeImageSource() {
   if (options.length === 0)
   { 
-    alert("マップを１つ以上選択してください");
+    alert("マップを１つ以上選択してください!");
     console.log("options is empty");
   } else 
   {
@@ -30,56 +54,78 @@ function GitHub_ButtonPush(){
       {
         button.disabled = true;
 
-  
+        if (SoundButton_toggle == true) {
+          document.getElementById('Roulette_Start_audio').currentTime = 0; //連続クリックに対応
+          document.getElementById('Roulette_Start_audio').play(); //音を再生
+        }
     
-      //変更する画像を取得するプログラム
-      var Resultimg = document.getElementById('Resultimage');
+        //変更する画像を取得するプログラム
+        var Resultimg = document.getElementById('Resultimage');
+        let randomIndex = Math.floor(Math.random() * options.length);
+        let selectedMap = options[randomIndex];
+        console.log(selectedMap);
 
-      let randomIndex = Math.floor(Math.random() * options.length);
-      let selectedMap = options[randomIndex];
-      console.log(selectedMap);
 
-      if (selectedMap == "ASCENT") {
-        Resultimg.src = 'images/Resultimages/ASCENT.jpg';
-      }
-      if (selectedMap == "BIND") {
-        Resultimg.src = 'images/Resultimages/BIND.jpg';
-      }
-      if (selectedMap == "BREEZE") {
-        Resultimg.src = 'images/Resultimages/BREEZE.jpg';
-      }
-      if (selectedMap == "FRACTURE") {
-        Resultimg.src = 'images/Resultimages/FRACTURE.jpg';
-      }
-      if (selectedMap == "HAVEN") {
-        Resultimg.src = 'images/Resultimages/HAVEN.jpg';
-      }
-      if (selectedMap == "ICEBOX") {
-        Resultimg.src = 'images/Resultimages/ICEBOX.jpg';
-      }
-      if (selectedMap == "LOTUS") {
-        Resultimg.src = 'images/Resultimages/LOTUS.jpg';
-      }
-      if (selectedMap == "PEARL") {
-        Resultimg.src = 'images/Resultimages/PEARL.jpg';
-      }
-      if (selectedMap == "SPLIT") {
-        Resultimg.src = 'images/Resultimages/SPLIT.jpg';
-      }
-      if (selectedMap == "SUNSET") {
-        Resultimg.src = 'images/Resultimages/SUNSET.jpg';
-      }
 
-      const Resultimg_Anim = document.getElementById('Resultimage');
-      gsap.from(Resultimg_Anim, { opacity: 0, duration: 1, delay: 0.1 });
-    
+
+        //3秒間待つ
+        setTimeout(() => {
+
+          if (selectedMap == "ASCENT") {
+            Resultimg.src = 'images/Resultimages/ASCENT.jpg';
+          }
+          if (selectedMap == "BIND") {
+            Resultimg.src = 'images/Resultimages/BIND.jpg';
+          }
+          if (selectedMap == "BREEZE") {
+            Resultimg.src = 'images/Resultimages/BREEZE.jpg';
+          }
+          if (selectedMap == "FRACTURE") {
+            Resultimg.src = 'images/Resultimages/FRACTURE.jpg';
+          }
+          if (selectedMap == "HAVEN") {
+            Resultimg.src = 'images/Resultimages/HAVEN.jpg';
+          }
+          if (selectedMap == "ICEBOX") {
+            Resultimg.src = 'images/Resultimages/ICEBOX.jpg';
+          }
+          if (selectedMap == "LOTUS") {
+            Resultimg.src = 'images/Resultimages/LOTUS.jpg';
+          }
+          if (selectedMap == "PEARL") {
+            Resultimg.src = 'images/Resultimages/PEARL.jpg';
+          }
+          if (selectedMap == "SPLIT") {
+            Resultimg.src = 'images/Resultimages/SPLIT.jpg';
+          }
+          if (selectedMap == "SUNSET") {
+            Resultimg.src = 'images/Resultimages/SUNSET.jpg';
+          }
+
+
+
+
+
+          if (SoundButton_toggle == true) {
+            document.getElementById('Roulette_Result_audio').currentTime = 0; //連続クリックに対応
+            document.getElementById('Roulette_Result_audio').play(); //音を再生
+          }
+
+          const Resultimg_Anim = document.getElementById('Resultimage');
+          gsap.from(Resultimg_Anim, { opacity: 0, duration: 1, delay: 0.1 });  
+
+        }, 1000);
+
+
 
       setTimeout(function() {
         button.disabled = false;
-      }, 1500); // ここでは3秒後にボタンを有効化する例です
+      }, 1500); //3秒後にボタンを有効化する
     }    
   }
 }
+
+
 
   // トグルボタンの初期状態を設定（初期はtrue）
   let ASCENT_togglebutton = true;
@@ -97,6 +143,10 @@ function GitHub_ButtonPush(){
 
   // トグルボタンの処理（アセント
 function ASCENT_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "ASCENT"; //アセントという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('ASCENT_Buttonid'); //ボタンのidをコピペする
@@ -116,6 +166,10 @@ function ASCENT_ButtonPush() {
 }
 
 function BIND_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "BIND"; //バインドという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('BIND_Buttonid'); //ボタンのidをコピペする
@@ -135,6 +189,10 @@ function BIND_ButtonPush() {
 }
 
 function BREEZE_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "BREEZE"; //ブリーズという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('BREEZE_Buttonid'); //ボタンのidをコピペする
@@ -154,6 +212,10 @@ function BREEZE_ButtonPush() {
 }
 
 function FRACTURE_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "FRACTURE"; //フラクチャーという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('FRACTURE_Buttonid'); //ボタンのidをコピペする
@@ -173,6 +235,10 @@ function FRACTURE_ButtonPush() {
 }
 
 function HAVEN_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "HAVEN"; //フラクチャーという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('HAVEN_Buttonid'); //ボタンのidをコピペする
@@ -192,6 +258,10 @@ function HAVEN_ButtonPush() {
 }
 
 function ICEBOX_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "ICEBOX"; //フラクチャーという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('ICEBOX_Buttonid'); //ボタンのidをコピペする
@@ -211,6 +281,10 @@ function ICEBOX_ButtonPush() {
 }
 
 function LOTUS_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "LOTUS"; //フラクチャーという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('LOTUS_Buttonid'); //ボタンのidをコピペする
@@ -230,6 +304,10 @@ function LOTUS_ButtonPush() {
 }
 
 function PEARL_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "PEARL"; //フラクチャーという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('PEARL_Buttonid'); //ボタンのidをコピペする
@@ -249,6 +327,10 @@ function PEARL_ButtonPush() {
 }
 
 function SPLIT_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "SPLIT"; //フラクチャーという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('SPLIT_Buttonid'); //ボタンのidをコピペする
@@ -268,6 +350,10 @@ function SPLIT_ButtonPush() {
 }
 
 function SUNSET_ButtonPush() {
+  if (SoundButton_toggle == true) {
+    document.getElementById('btn_Click_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_Click_audio').play(); //クリックしたら音を再生
+  }
   var searchElement = "SUNSET"; //フラクチャーという文字を検索し、配列に追加したり消したりする
   var index = options.indexOf(searchElement);
   const image = document.getElementById('SUNSET_Buttonid'); //ボタンのidをコピペする
