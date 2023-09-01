@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="CSS/Style.css">
     <link rel="stylesheet" href="CSS/Animations.css">
     <link rel="stylesheet" href="CSS/StartButton.css">
+    <link rel="stylesheet" href="CSS/SoundButton.css">
+    <link rel="stylesheet" href="CSS/GitHubButton.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -22,8 +24,25 @@
     <title>ROULETTE ONLINE</title>
     <header>
 
-      <button id="GitHub_Buttonid" onclick="GitHub_ButtonPush()"ASCENT><img id="GitHub_Buttonid" src="images/Buttonimages/GitHub.png" alt="Github" onselectstart="return false;" onmousedown="return false;"></button>
+      <button id="GitHub_Buttonid" onclick="GitHub_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="GitHub_Buttonid" src="images/Buttonimages/GitHub.png" alt="Github" onselectstart="return false;" onmousedown="return false;"></button>
         
+      <!--ミュートボタン-->
+                <input type="checkbox" id="checkboxInput" >
+              <label for="checkboxInput" class="toggleSwitch" onclick="SoundButton_push()" onmouseenter="PlayButtonEnterSound()">
+          <div class="speaker"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 75 75">
+          <path d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z" style="stroke:#ffffff;stroke-width:5;stroke-linejoin:round;fill:#fff;"></path>
+          <path d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"></path>
+          </svg></div>
+          <div class="mute-speaker"><svg version="1.0" viewBox="0 0 75 75" stroke="#fff" stroke-width="5">
+          <path d="m39,14-17,15H6V48H22l17,15z" fill="#fff" stroke-linejoin="round"></path>
+          <path d="m49,26 20,24m0-24-20,24" fill="#fff" stroke-linecap="round"></path>
+          </svg></div>
+              </label>
+
+
+
+
+
 
     <h1 class="Headertitle">VALORANT ROULETTE ONLINE</h1>
     </header>
@@ -31,7 +50,7 @@
     <div class="split-container">
       <div class="split-middle">
         <!-- Roulette start -->
-            <button class="StartButton" id="StartButton"onclick="changeImageSource()" class="StartButton">
+            <button class="StartButton" id="StartButton"onclick="changeImageSource()" onmouseenter="PlayButtonEnterSound()" class="StartButton">
               <span class="StartButton_lg">
                   <span class="StartButton_sl"></span>
                   <span class="StartButton_text">Roulette START</span>
@@ -45,20 +64,26 @@
       </div>
       <div class="split-button">
 
-        <button id="ASCENT_Buttonid" onclick="ASCENT_ButtonPush()"ASCENT><img id="ASCENT_Buttonid" src="images/Buttonimages/ASCENT.png" alt="ASCENT" onselectstart="return false;" onmousedown="return false;"></button>
-        <button id="BIND_Buttonid" onclick="BIND_ButtonPush()"><img id="BIND_Buttonid" src="images/Buttonimages/BIND.png" alt="BIND" onselectstart="return false;" onmousedown="return false;"></button>
-        <button id="BREEZE_Buttonid" onclick="BREEZE_ButtonPush()"><img id="BREEZE_Buttonid" src="images/Buttonimages/BREEZE.png" alt="BREEZE" onselectstart="return false;" onmousedown="return false;"></button></button>
-        <button id="FRACTURE_Buttonid" onclick="FRACTURE_ButtonPush()"><img id="FRACTURE_Buttonid" src="images/Buttonimages/FRACTURE.png" alt="FRACTURE" onselectstart="return false;" onmousedown="return false;"></button></button>
-        <button id="HAVEN_Buttonid" onclick="HAVEN_ButtonPush()"><img id="HAVEN_Buttonid" src="images/Buttonimages/HAVEN.png" alt="HAVEN" onselectstart="return false;" onmousedown="return false;"></button></button>
-        <button id="ICEBOX_Buttonid" onclick="ICEBOX_ButtonPush()"><img id="ICEBOX_Buttonid" src="images/Buttonimages/ICEBOX.png" alt="ICEBOX" onselectstart="return false;" onmousedown="return false;"></button></button>
-        <button id="LOTUS_Buttonid" onclick="LOTUS_ButtonPush()"><img id="LOTUS_Buttonid" src="images/Buttonimages/LOTUS.png" alt="LOTUS" onselectstart="return false;" onmousedown="return false;"></button></button>
-        <button id="PEARL_Buttonid" onclick="PEARL_ButtonPush()"><img id="PEARL_Buttonid" src="images/Buttonimages/PEARL.png" alt="PEARL" onselectstart="return false;" onmousedown="return false;"></button></button>
-        <button id="SPLIT_Buttonid" onclick="SPLIT_ButtonPush()"><img id="SPLIT_Buttonid" src="images/Buttonimages/SPLIT.png" alt="SPLIT" onselectstart="return false;" onmousedown="return false;"></button></button>
-        <button id="SUNSET_Buttonid" onclick="SUNSET_ButtonPush()"><img id="SUNSET_Buttonid" src="images/Buttonimages/SUNSET.png" alt="SUNSET" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="ASCENT_Buttonid" onclick="ASCENT_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="ASCENT_Buttonid" src="images/Buttonimages/ASCENT.png" alt="ASCENT" onselectstart="return false;" onmousedown="return false;"></button>
+        <button id="BIND_Buttonid" onclick="BIND_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="BIND_Buttonid" src="images/Buttonimages/BIND.png" alt="BIND" onselectstart="return false;" onmousedown="return false;"></button>
+        <button id="BREEZE_Buttonid" onclick="BREEZE_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="BREEZE_Buttonid" src="images/Buttonimages/BREEZE.png" alt="BREEZE" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="FRACTURE_Buttonid" onclick="FRACTURE_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="FRACTURE_Buttonid" src="images/Buttonimages/FRACTURE.png" alt="FRACTURE" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="HAVEN_Buttonid" onclick="HAVEN_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="HAVEN_Buttonid" src="images/Buttonimages/HAVEN.png" alt="HAVEN" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="ICEBOX_Buttonid" onclick="ICEBOX_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="ICEBOX_Buttonid" src="images/Buttonimages/ICEBOX.png" alt="ICEBOX" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="LOTUS_Buttonid" onclick="LOTUS_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="LOTUS_Buttonid" src="images/Buttonimages/LOTUS.png" alt="LOTUS" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="PEARL_Buttonid" onclick="PEARL_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="PEARL_Buttonid" src="images/Buttonimages/PEARL.png" alt="PEARL" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="SPLIT_Buttonid" onclick="SPLIT_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="SPLIT_Buttonid" src="images/Buttonimages/SPLIT.png" alt="SPLIT" onselectstart="return false;" onmousedown="return false;"></button></button>
+        <button id="SUNSET_Buttonid" onclick="SUNSET_ButtonPush()" onmouseenter="PlayButtonEnterSound()"><img id="SUNSET_Buttonid" src="images/Buttonimages/SUNSET.png" alt="SUNSET" onselectstart="return false;" onmousedown="return false;"></button></button>
         
 
+        <audio id="btn_Select_audio" src="Sounds/Select.mp3" type="audio/mp3" preload="auto"></audio>
+        <audio id="btn_Click_audio" src="Sounds/Click.mp3" type="audio/mp3" preload="auto"></audio>
+        <audio id="Roulette_Result_audio" src="Sounds/Roulette_Result.mp3" type="audio/mp3" preload="auto"></audio>
+        <audio id="Roulette_Start_audio" src="Sounds/Roulette_Start.mp3" type="audio/mp3" preload="auto"></audio>
+
+        
       </div>
-      <p id="Version"> Version1.20</p>
+      <p id="Version"> Ver_0.3(BETA)</p>
     </div>
   </body>
 </html>
