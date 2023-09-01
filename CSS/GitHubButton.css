@@ -1,0 +1,13 @@
+  /*GitHubボタン*/
+  #GitHub_Buttonid {
+    width: 5%;
+    max-width: 50px;
+    min-width: 30px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
+    border-color: transparent; /* 枠線を透明にする */
+    top: 30px;
+    position: fixed;
+    right: 30px;
+    
+  }

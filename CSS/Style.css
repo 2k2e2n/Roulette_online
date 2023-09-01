@@ -8,6 +8,12 @@ body {
   /* 画像を中央寄せする */
 }
 
+/*スマホで拡大するのを防ぐ*/
+html {
+  touch-action: manipulation;
+}
+
+
 /*カスタムフォントを指定*/
 @font-face {
   font-family: 'ValorantFont';
@@ -81,28 +87,6 @@ body {
     justify-content: center;
     height: auto;
     flex-wrap: wrap;
-  }
-
-  /*右上固定のGithubジャンプボタン*/
-  .fixed_btn
-  {
-  top: 40px; 
-  right: 10px;
-  padding: 6px 40px;
-  }
-
-  /*GitHubボタン1*/
-  #GitHub_Buttonid {
-    width: 5%;
-    max-width: 50px;
-    min-width: 30px;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0); /* 背景色を透明にする */
-    border-color: transparent; /* 枠線を透明にする */
-    top: 30px;
-    position: fixed;
-    right: 30px;
-    
   }
 
   #Version {
